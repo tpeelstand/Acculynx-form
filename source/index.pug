@@ -1,5 +1,5 @@
-//- index.pug 
-- var title= "Customer Form";
+//- index.pug
+- var title= "Profile Builder";
 
 DOCTYPE
     html(lang="en")
@@ -16,17 +16,17 @@ DOCTYPE
             .form-wrapper
                 // Header
                 include includes/header.pug
-                
+
                 // Main Content
                 .main-content
                     .container
                         include includes/aside.pug
 
                         include includes/form.pug
-                    
-                // Footer    
+
+                // Footer
                 include includes/footer.pug
-               
+
         // Add Email
         script.
             var email = 1;
@@ -38,7 +38,7 @@ DOCTYPE
 
                 objTo.appendChild(createEmail)
             }
-            
+
         // Add Phone
         script.
             var phone = 1;
