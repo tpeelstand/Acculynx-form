@@ -1,0 +1,81 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+
+// Reset the padding start for chrome
+ul {
+    -webkit-padding-start: 0px;
+}
+// Default styles
+.clear {
+    clear: both;
+}
+
+.mobile-hidden {
+   // Media Queries
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+// Default type styles
+h1 {
+    color: @color-base;
+    font-size: 2.5em;
+    margin: 10px auto;
+    text-align: left;
+    font-family: 'Righteous', cursive;
+    // Media Queries
+    @media screen and (max-width: 768px) {
+        font-size: 2em;
+        text-align: center;
+    }
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.15em;
+}
+
+// Default structural styles
+html,
+body,
+.form-wrapper {
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    background-color: @color-light;
+}
+
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1 1 auto;
+    position: relative;/* need this to position inner content */
+    overflow-y: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow-y: auto;
+
+    // Media Queries
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+.container * {
+    box-sixing: border-box;
+}

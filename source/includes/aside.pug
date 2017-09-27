@@ -1,0 +1,17 @@
+//- aside.pug
+.aside
+    .fixed-box
+        h2 Welcome!
+        p Get ready to build your profile! Complete the profile builder form and join the network! Add as many phone numbers or emails as you would like.
+
+        .add-phone 
+            h3 Add Phone
+            p.mobile-hidden Need to add an additional phone number? Click the button!
+            button(class="btn btn--add" onclick="add_phone();" value="Add Phone Number")
+                i(class="fa fa-phone-square" aria-hidden="true")
+
+        .add-email
+            h3 Add Email
+            p.mobile-hidden Need to add an additional email address? Click the button and add as many as you need!
+            button(class="btn btn--add" onclick="add_email();" value="Add Email Address")
+                i(class="fa fa-envelope" aria-hidden="true")

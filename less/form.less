@@ -1,0 +1,252 @@
+//Setting up the right side
+.form-side {
+    width: 70%;
+    float: left;
+
+    // Media Queries
+    @media screen and (max-width: 1023px) {
+        width: 90%;
+        float: left;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+// Outer/Inner Form Styling
+.form-outer {
+    list-style-type: none;
+    padding: 0;
+}
+
+.form-outer {
+    max-width: 800px;
+    margin: 25px 0 0;
+}
+
+.form-outer li,
+.form-outer div li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form-outer > li:not(last-child) {
+    margin-bottom: 20px;
+}
+
+.form-outer li label,
+.form-outer div li label,
+.form-outer li span {
+    font-weight: 300;
+    letting-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.form-outer > li  > label,
+.form-outer > div > li > label,
+.form-outer > span > label,
+.form-outer li span {
+    flex: 1 0 120px;
+    max-width: 200px;
+
+    // Media Queries
+    @media screen and (max-width: 768px) {
+        display: block;
+        width: 94%;
+        max-width: 100%;
+        margin: 7px;
+        flex: none;
+    }
+}
+
+.form-outer > li > label + *,
+.form-outer > div > li > label + *,
+.form-inner {
+    flex: 1 0 200px;
+}
+
+.form-outer {
+    li {
+        position: relative;
+
+        .validation {
+            position: absolute;
+            bottom: 5px;
+            right: 0;
+            color: @color-base;
+            font-size: .75em;
+
+            &:before {
+                content: '\f071 \00a0';
+                font-family: "FontAwesome"
+            }
+        }
+
+        input:not([type='radio']) {
+            padding: 10px 5px;
+            border: none;
+        }
+        // Adjustment to style of form inputs for file type
+        input[type='text'] {
+            border-left: none;
+            border-right: none;
+            border-top: none;
+            border-bottom: 1px solid lighten(@color-dark, 50%);
+            background: none;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+                margin: 0 5px;
+                padding: 10px 3px;
+            }
+        }
+    }
+}
+
+// Form Button
+    // All buttons are kept in the buttons.less file. Check that file out to change button styles. Thanks!
+
+// Phone Number Styling
+#phone-wrapper {
+    padding: 15px 0 30px 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    background: @color-light;
+    background-image: none;
+}
+
+/* Custom Select */
+.select {
+    position: relative;
+    display: block;
+    width: 16em;
+    height: 2em;
+    line-height: 3;
+    background: @color-light;
+    overflow: hidden;
+    border-radius: 0;
+    border: 1px solid darken(@color-light, 30%);
+}
+select {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: .25em 0 0 .5em;
+    cursor: pointer;
+    color: @color-dark;
+}
+select::-ms-expand {
+    display: none;
+}
+/* Arrow */
+.select::after {
+    content: '\f107';
+    font-family: "FontAwesome";
+    position: absolute;
+    right: 0;
+    top: -7px;
+    padding: 0 1em;
+    background: @color-light;
+    color: @color-dark;
+    pointer-events: none;
+
+}
+/* Transition */
+.select:hover::after {
+    color: #f39c12;
+}
+.select::after {
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+}
+
+.phone-type {
+    margin: 10px auto 0;
+    margin-left: 200px;
+
+    // Media Queries
+    @media screen and (max-width: 768px) {
+         margin-left: 10px;
+    }
+}
+
+// Style updates to email address
+#email-wrapper {
+    padding: 15px 0 30px 0;
+}
+.email-input {
+    width: 85%;
+    position: relative;
+
+    input {
+        width: 100%;
+
+    }
+}
+
+.primary-box {
+    width: 15%;
+    padding-top: 10px;
+    input {
+        float: right;
+        vertical-align: center;
+    }
+
+    // Media Queries
+    @media screen and (max-width: 1024px) {
+      width: 25%;
+      position: absolute;
+      right: 5px;
+      bottom: 5px;
+    }
+    @media screen and (max-width: 567px) {
+        width: 25%;
+        position: absolute;
+        right: 5px;
+        bottom: 45px;
+    }
+
+    &:before {
+        content: '\00a0 Primary';
+        float: right;
+        font-size: .9em;
+        margin-top: -2px;
+    }
+}
+
+// Adjusting the type="file" styles
+input[type="file"] {
+    display: none;
+}
+.contact-photo {
+    border: 1px solid @color-light;
+    background-color: @color-base;
+    color: @color-light;
+    display: inline-block;
+    padding: 12px;
+    cursor: pointer;
+
+    &:after {
+        content: ' Upload Photo...';
+
+    }
+    &:hover {
+        background-color: @color-comp;
+    }
+}
+
+
+// Adjusting the placeholder text
+input::placeholder {
+    color: lighten(@color-dark, 60%);
+}

@@ -1,0 +1,88 @@
+// Form Submit Button
+.btn {
+    margin-left: auto;
+    padding: 8px 16px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 0;
+    font-family: 'Open Sans', sans-serif;
+
+    &:hover {
+       cursor: pointer;
+    }
+}
+
+// Submit button styles
+.btn--submit {
+    background: @color-base;
+    color: @color-light;
+    font-weight: 100;
+
+    &:after {
+        content: ' \f1d9';
+        font-family: "FontAwesome"
+    }
+
+    &:hover {
+        background-color: @color-comp;
+    }
+
+    // Media Queries
+    @media screen and (max-width: 768px) {
+        padding: 10px 0;
+        width: 100%;
+    }
+}
+
+// Button for adding an email field
+.btn--add {
+    background: @color-base;
+    color: @color-light;
+    width: 100%;
+    margin-top: 10px;
+    font-weight: 100;
+    height: 35px;
+
+        &:hover {
+            background-color: @color-comp;
+        }
+
+    // Media Queries
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+
+// adjust the font awesome font-sizes
+i.fa {
+    font-size: 1em;
+
+}
+i.fa-envelope {
+    &:after {
+        content: ' Add Email';
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+
+        @media screen and (max-width: 768px) {
+            content: ' ';
+        }
+    }
+}
+i.fa-phone-square {
+    &:after {
+        content: ' Add Phone';
+        font-family: 'Open Sans', sans-serif;
+        font-weight: normal;
+
+        // Media Queries
+        @media screen and (max-width: 768px) {
+            content: '';
+        }
+    }
+}

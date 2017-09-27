@@ -1,0 +1,160 @@
+
+<DOCTYPE>
+  <html lang="en">
+    <head>
+      <!-- meta tags-->
+      <meta name="viewport" content="width=device-width, initial-scale=1"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge, chrome=1"/>
+      <title>Customer Form</title>
+      <!-- Styles-->
+      <link href="css/main.css" rel="stylesheet"/>
+      <!-- Font Awesome CDN-->
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    </head>
+    <body>
+      <div class="form-wrapper">
+        <!-- Header-->
+        <div class="fixed-header">
+          <div class="container">
+            <h1>Profile Builder<i class="fa fa-user-circle-o" aria-hidden="true"></i></h1>
+          </div>
+        </div>
+        <!-- Main Content-->
+        <div class="main-content">
+          <div class="container">
+            <div class="aside">
+              <div class="fixed-box">
+                <h2>Welcome!</h2>
+                <p>Get ready to build your profile! Complete the profile builder form and join the network! Add as many phone numbers or emails as you would like.</p>
+                <div class="add-phone"> 
+                  <h3>Add Phone</h3>
+                  <p class="mobile-hidden">Need to add an additional phone number? Click the button!</p>
+                  <button class="btn btn--add" onclick="add_phone();" value="Add Phone Number"><i class="fa fa-phone-square" aria-hidden="true"></i></button>
+                </div>
+                <div class="add-email">
+                  <h3>Add Email</h3>
+                  <p class="mobile-hidden">Need to add an additional email address? Click the button and add as many as you need!</p>
+                  <button class="btn btn--add" onclick="add_email();" value="Add Email Address"><i class="fa fa-envelope" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+            <form class="form-side">
+              <ul class="form-outer">
+                <!-- Contact Photo Upload-->
+                <li><span>Contact Photo</span>
+                  <label class="contact-photo" for="file-upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i></label>
+                  <input id="file-upload" type="file"/>
+                </li>
+                <!-- First Name-->
+                <li>
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" placeholder="First Name" required="required"/>
+                  <div class="validation">Ooops! You forgot this this one!</div>
+                </li>
+                <!-- Last Name-->
+                <li>
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" placeholder="Last Name" required="required"/>
+                  <div class="validation">Ooops! You forgot this this one!</div>
+                </li>
+                <!-- Company Name-->
+                <li>
+                  <label for="company-name">Company Name</label>
+                  <input type="text" id="company-name" placeholder="Company Name" required="required"/>
+                  <div class="validation">Ooops! You forgot this this one!</div>
+                </li>
+                <!-- Phone Numbers-->
+                <div id="phone-wrapper">
+                  <li>
+                    <label for="phone-number">Phone Number</label>
+                    <ul>
+                      <li>
+                        <input type="text" id="phone-number" placeholder="Phone Number" required="required"/>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li>
+                        <input type="text" placeholder="ext."/>
+                      </li>
+                    </ul>
+                    <ul class="phone-type">
+                      <li>
+                        <div class="select">
+                          <select name="select" id="select" placeholder="Choose Phone Type">
+                            <option value="Mobile">Mobile</option>
+                            <option value="Home">Home</option>
+                            <option value="Work">Work</option>
+                          </select>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="primary-box">
+                      <input class="primary-email" type="radio"/>
+                    </div>
+                  </li>
+                </div>
+                <!-- Email-->
+                <div id="email-wrapper">
+                  <li>
+                    <label for="email">Primary Email</label>
+                    <div class="email-input"> 
+                      <input class="email" type="text" placeholder="Primary Email" required="required"/>
+                      <div class="validation">Ooops! You forgot this this one!</div>
+                    </div>
+                  </li>
+                </div>
+                <!-- Mailing Address-->
+                <li>
+                  <label for="mailing-address">Mailing Address</label>
+                  <input type="text" id="mailing-address" placeholder="Mailing Address" required="required"/>
+                  <div class="validation">Ooops! You forgot this this one!</div>
+                </li>
+                <!-- Billing Address-->
+                <li>
+                  <label for="billing-address">Billing Address</label>
+                  <input type="text" id="billing-address" placeholder="Billing Address"/>
+                  <div class="validation">Ooops! You forgot this this one!</div>
+                </li>
+                <!-- Submit Button
+                // See fixed footer for submit button
+                   
+                -->
+              </ul>
+            </form>
+          </div>
+        </div>
+        <!-- Footer    -->
+        <div class="fixed-footer">
+          <div class="container">
+            <button class="btn btn--submit" type="submit">Submit Form  </button>
+          </div>
+        </div>
+      </div>
+    </body>
+    <!-- Add Email-->
+    <script>
+      var email = 1;
+      function add_email() {
+          email++;
+          var objTo = document.getElementById('email-wrapper')
+          var createEmail = document.createElement("li");
+          createEmail.innerHTML = '<label for="email">Email ' + email +'</label><div class="email-input"><input class="email" type="text" placeholder="Additional Email"/></div>';
+      
+          objTo.appendChild(createEmail)
+      }
+      
+    </script>
+    <!-- Add Phone-->
+    <script>
+      var phone = 1;
+      function add_phone() {
+          phone++;
+          var objTo = document.getElementById('phone-wrapper')
+          var createPhone = document.createElement("li");
+          createPhone.innerHTML = '<label for="phone-number">Phone ' + phone +'</label> <ul> <li> <input type="text" id="phone-number" placeholder="Phone Number" required="required"> </li></ul> <ul> <li> <input type="text" placeholder="ext."> </li></ul><ul class="phone-type"> <li> <div class="select"> <select name="select" id="select" placeholder="Choose Phone Type"> <option value="Mobile">Mobile</option><option value="Home">Home</option><option value="Work">Work</option></select> </li></ul></div><div class="primary-box"> <input class="primary-email" type="radio"> </div>';
+      
+          objTo.appendChild(createPhone)
+      }
+    </script>
+  </html>
+</DOCTYPE>
