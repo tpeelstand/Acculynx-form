@@ -1,4 +1,4 @@
-//Setting up the right side
+//Setting up the form side
 .form-side {
     width: 70%;
     float: left;
@@ -13,7 +13,7 @@
     }
 }
 
-// Outer/Inner Form Styling
+// Outer Form Styling
 .form-outer {
     list-style-type: none;
     padding: 0;
@@ -107,7 +107,7 @@
 // Form Button
     // All buttons are kept in the buttons.less file. Check that file out to change button styles. Thanks!
 
-// Phone Number Styling
+// Custom Phone Number Select
 #phone-wrapper {
     padding: 15px 0 30px 0;
 }
@@ -124,7 +124,6 @@ select {
     background-image: none;
 }
 
-/* Custom Select */
 .select {
     position: relative;
     display: block;
@@ -200,27 +199,43 @@ select::-ms-expand {
     input {
         float: right;
         vertical-align: center;
+        margin-right: 2px;
+        margin-top: 0;
+        width: 18px;
+        height: 18px;
+
+        // Media Queries
+        @media screen and (max-width: 768px) {
+          width: 14px;
+          height: 14px;
+        }
+    }
+    label {
+      float: right;
+      text-transform: none;
+      vertical-align: center;
+      @media screen and (max-width: 768px) {
+        font-size: 12px;
+      }
     }
 
     // Media Queries
+
     @media screen and (max-width: 1024px) {
       width: 25%;
       position: absolute;
       right: 5px;
       bottom: 5px;
     }
+    @media screen and (max-width:990px) {
+      position: relative;
+      width: 11%;
+    }
     @media screen and (max-width: 567px) {
         width: 25%;
         position: absolute;
         right: 5px;
         bottom: 45px;
-    }
-
-    &:before {
-        content: '\00a0 Primary';
-        float: right;
-        font-size: .9em;
-        margin-top: -2px;
     }
 }
 

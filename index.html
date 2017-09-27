@@ -41,7 +41,7 @@
             <form class="form-side">
               <ul class="form-outer">
                 <!-- Contact Photo Upload-->
-                <li><span>Contact Photo</span>
+                <li><span>Profile Photo</span>
                   <label class="contact-photo" for="file-upload"><i class="fa fa-cloud-upload" aria-hidden="true"></i></label>
                   <input id="file-upload" type="file"/>
                 </li>
@@ -89,7 +89,8 @@
                       </li>
                     </ul>
                     <div class="primary-box">
-                      <input class="primary-email" type="radio"/>
+                      <label for="primary-email">Primary</label>
+                      <input class="primary-phone" type="radio" id="primary-email"/>
                     </div>
                   </li>
                 </div>
@@ -97,7 +98,7 @@
                 <div id="email-wrapper">
                   <li>
                     <label for="email">Primary Email</label>
-                    <div class="email-input"> 
+                    <div class="email-input">
                       <input class="email" type="text" placeholder="Primary Email" required="required"/>
                       <div class="validation">Ooops! You forgot this this one!</div>
                     </div>
@@ -115,9 +116,7 @@
                   <input type="text" id="billing-address" placeholder="Billing Address"/>
                   <div class="validation">Ooops! You forgot this this one!</div>
                 </li>
-                <!-- Submit Button
-                // See fixed footer for submit button
-                   
+                <!-- Submit Button// See fixed footer for submit button
                 -->
               </ul>
             </form>
@@ -151,7 +150,7 @@
           phone++;
           var objTo = document.getElementById('phone-wrapper')
           var createPhone = document.createElement("li");
-          createPhone.innerHTML = '<label for="phone-number">Phone ' + phone +'</label> <ul> <li> <input type="text" id="phone-number" placeholder="Phone Number" required="required"> </li></ul> <ul> <li> <input type="text" placeholder="ext."> </li></ul><ul class="phone-type"> <li> <div class="select"> <select name="select" id="select" placeholder="Choose Phone Type"> <option value="Mobile">Mobile</option><option value="Home">Home</option><option value="Work">Work</option></select> </li></ul></div><div class="primary-box"> <input class="primary-email" type="radio"> </div>';
+          createPhone.innerHTML = '<label for="phone-number">Phone ' + phone +'</label> <ul> <li> <input type="text" id="phone-number" placeholder="Phone Number"> </li></ul> <ul> <li> <input type="text" placeholder="ext."> </li></ul><ul class="phone-type"> <li> <div class="select"> <select name="select" id="select" placeholder="Choose Phone Type"> <option value="Mobile">Mobile</option><option value="Home">Home</option><option value="Work">Work</option></select> </li></ul></div><div class="primary-box"> <label for="'+phone+'">Primary</label><input class="primary-phone" id="'+phone+'" type="radio"> </div>';
       
           objTo.appendChild(createPhone)
       }
