@@ -5,6 +5,6 @@ For this project I used the following code languages: Pug (for HTML templating),
 
 Given a week to complete, but spent a total of around 10 - 12 hours building the form mainly before and after work and a little on the weekend.
 
-If I had a bit more time I would most likely mae it so the button for adding email and phone would stay fixed to the top on the screen on a phone so it would easier to add them as you scroll down the page. I may even do this is my free time at some point....basicly because it bugs me and I don't want to leave it unfinished.
+If I had a bit more time I would most likely make it so the buttons for adding emails and phone numbers would stay fixed to the top on the screen of a phone/small tablet so it would easier to add them as you scroll down the page. I may even do this is my free time at some point....basicly because it bugs me and I don't want to leave it unfinished.
 
 Feedback is welcome!
