@@ -1,4 +1,8 @@
 # Acculynx-form
+
+NOTE: 09/30/18 - Noticed that when I did the PUG file I wrapped the doctype around the html. I should have done a doctype html and then on the next line without an indent done my html(lang="en"). It must have looked a bit silly to see a doctype wrapped around the html. Anyways, I didn't want to change it now since the project time had expired.
+
+
 Here is a form I created for the Acculynx code challenge. It is a responsive form that works on phone, tablet and computer. Doing this form was quite fun and I enjoyed using the knowledge I already had and also learning more about flexbox and doing responsive design and development without using a framework.
 
 For this project I used the following languages: Pug (for HTML templating), Less (my pre-prossesor), and a bit of javascript to help with creating additional form fields. 
